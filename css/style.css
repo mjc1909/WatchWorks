@@ -1,0 +1,51 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(/img/pinkbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    font-family: 'shadows into light', Impact, 'Arial Narrow Bold', sans-serif;
+    color: antiquewhite;
+    font-size: 60px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin: 20px;
+}
+
+p{
+    font-family: 'shadows into light', Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    color: antiquewhite;
+    font-weight: 400;
+}
+
+.p-1{
+    
+    border-top: 1px solid antiquewhite;
+}
+
+.productImg{
+    height: 200px;
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.productImg:hover{
+    transform:scale(1.1);
+    transition: 1.5s;
+}
+
+.products-container{
+    margin: 20px;
+    text-align: center;
+    padding: 60px;
+}

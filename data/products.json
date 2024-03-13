@@ -1,0 +1,49 @@
+{
+  "retro_watches": [
+    {
+      "brand": "Seiko",
+      "model": "Seiko 5 SNK809",
+      "year": 1996,
+      "movement": "Automatic",
+      "case_material": "Stainless Steel",
+      "price": 150.00,
+      "availability": true
+    },
+    {
+      "brand": "Casio",
+      "model": "Casio F91W",
+      "year": 1989,
+      "movement": "Quartz",
+      "case_material": "Resin",
+      "price": 20.00,
+      "availability": true
+    },
+    {
+      "brand": "Timex",
+      "model": "Timex Weekender",
+      "year": 1950,
+      "movement": "Quartz",
+      "case_material": "Brass",
+      "price": 30.00,
+      "availability": true
+    },
+    {
+      "brand": "Omega",
+      "model": "Omega Speedmaster Professional",
+      "year": 1957,
+      "movement": "Mechanical (Hand-Winding)",
+      "case_material": "Stainless Steel",
+      "price": 500.00,
+      "availability": false
+    },
+    {
+      "brand": "Swatch",
+      "model": "Swatch Originals",
+      "year": 1983,
+      "movement": "Quartz",
+      "case_material": "Plastic",
+      "price": 40.00,
+      "availability": true
+    }
+  ]
+}
