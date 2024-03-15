@@ -1,8 +1,8 @@
 [
     {
       "id": 1,
-      "brand": "Tissot",
-      "model": "Tissot Seastar 1000",
+      "brand": "TISSOT",
+      "model": "Seastar 1000",
       "year": 1996,
       "movement": "Automatisk",
       "case_material": "Rustfrit Stål",
@@ -12,8 +12,8 @@
     },
     {
       "id": 2,
-      "brand": "Omega",
-      "model": "Omega Seamaster 300M",
+      "brand": "OMEGA",
+      "model": "Seamaster 300M",
       "year": 1989,
       "movement": "Quartz",
       "case_material": "Resin",
@@ -24,8 +24,8 @@
     },
     {
       "id": 3,
-      "brand": "Seiko",
-      "model": "Seiko 5 SNKM75",
+      "brand": "SEIKO",
+      "model": "5 SNKM75",
       "year": 1950,
       "movement": "Quartz",
       "case_material": "Brass",
@@ -36,8 +36,8 @@
     },
     {
       "id": 4, 
-      "brand": "Tudor",
-      "model": "Tudor Black Bay",
+      "brand": "TUDOR",
+      "model": "Black Bay",
       "year": 1957,
       "movement": "Mechanical (Hand-Winding)",
       "case_material": "Stainless Steel",
@@ -48,8 +48,8 @@
     },
     {
       "id": 5,
-      "brand": "Swatch",
-      "model": "Swatch SB01K100",
+      "brand": "SWATCH",
+      "model": "SB01K100",
       "year": 1983,
       "movement": "Quartz",
       "case_material": "Plastic",

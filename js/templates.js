@@ -2,10 +2,12 @@ export const productsTmpl = (product) =>
 
     `
     <div class="div-1">
-    <p>${product.model}</p>
+    <p>${product.brand}</p>
+
+    <p class="p-4">${product.model}</p>
     <a href="post.html?id=${product.id}"><img class="productImg" src="${product.image}"></a>
-    <p class="p-1">${product.price} kr.</p>
-    <button class="b-1"><a href="post.html?id=${product.id}">Læs mere ></a></button>
+    <p class="p-2">${product.price} kr.</p>
+    <button class="b-1"><a href="post.html?id=${product.id}">Læs Mere ></a></button>
     </div>
     
     `;
@@ -14,10 +16,10 @@ export const productsTmpl = (product) =>
     `
     <div class="div-2">
     <h2>${product.brand}</h2>
-    <p class="p-2">${product.model}</p>
+    <p class="p-4">${product.model}</p>
     <img class="productImg2" src="${product.image}">
     <p class="p-2">${product.price} kr.</p>
-    <button class="b-2"><a>Læg I Kurv</a></button>
+    <button id="${product.id}" class="b-2"><a>Læg I Kurv</a></button>
     <br>
     <br>
     <p class="p-2">Beskrivelse</p>
@@ -31,5 +33,19 @@ export const productsTmpl = (product) =>
 
     </div>
     `;
+
+    export const basketProductTmpl = (product) => 
+
+    `
+    <div class="div-3">
+    <p class="p-3">${product.brand}</p>
+    <p class="p-3">${product.model}</p>
+    <p class="p-3">${product.price} kr.</p>
+    <button id="${product.id}" class="delete">Fjern</button>
+    </div>
+    
+    `
+    ;
+
 
     

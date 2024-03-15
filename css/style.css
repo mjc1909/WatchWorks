@@ -22,7 +22,7 @@ p{
     font-family:Impact, 'Arial Narrow Bold', sans-serif;
     font-size: 20px;
     color: #F2F0F0;
-    font-weight: 400;
+    
     margin: 10px;
 
 }
@@ -31,6 +31,7 @@ p{
 
 .p-1{
 color: #F2F0F0;
+
     
 }
 
@@ -151,7 +152,7 @@ h2{
 }
 
 .p-4{
-    font-size: 12px;
+    font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -164,6 +165,28 @@ h2{
 
 
 /*Single_View END*/
+
+/* Basket START */
+
+.product-list{
+    color: #F2F0F0;
+    text-align: center;
+}
+
+.div-3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+/* Basket END */
 
 @media only screen and (min-width: 600px){
     .logo{
