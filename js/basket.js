@@ -1,97 +1,69 @@
-import { basketProductTmpl } from "./templates.js"
-import data from "./fetch_data.js"
+import { basketProductTmpl } from "./templates.js";
+import data from "./fetch_data.js";
 
+const products = {
+    productsArray: [],
 
+    init: async () => {
+        const productOutput = document.querySelector('.product-list');
+        const productsData = await data.fetchProducts();
 
-const products = {}
+        products.productsArray = productsData;
 
-products.init = async () => {
+        products.renderProducts();
+        products.attachEventListeners();
+    },
 
+    renderProducts: () => {
+        const { productsArray } = products;
 
-    
-    const productOutput = document.querySelector('.product-list')
-    
-    
-    let productsArray = JSON.parse(localStorage.getItem('productList'))  || []
-    
-    const products = await data.fetchProducts();
-    
-    const removeFromBasket =  () => {
-    
-        const productRemove = document.querySelectorAll('.delete')
-        
-    
-        productRemove.forEach((btn) =>{
-        
-        btn.addEventListener('click', (event) =>{
-            const productId = event.target.getAttribute('id')
-        const index = productsArray.findIndex(product => product.id == productId )
-            
-        productsArray.splice(index, 1)
-        
-           localStorage.setItem('productList', JSON.stringify (productsArray))
-        render_products()
-        
-        })
-        
-        
-    })
-    
-    
-
-}
-    
-    const render_products = () => {
-        
-        if(productsArray.length != 0){
+        if (productsArray.length !== 0) {
+            const productOutput = document.querySelector('.product-list');
             productOutput.innerHTML = "";
-            
-            productsArray.forEach(post => {
-                productOutput.insertAdjacentHTML('beforeend', basketProductTmpl(post))
-                
-            })
-            removeFromBasket()
 
-        }else {
-            productOutput.innerHTML = 'Der er ingen varer i kurven'
+            productsArray.forEach(product => {
+                productOutput.insertAdjacentHTML('beforeend', basketProductTmpl(product));
+            });
+
+            products.removeFromBasket();
+        } else {
+            const productOutput = document.querySelector('.product-list');
+            productOutput.innerHTML = 'Der er ingen varer i kurven';
         }
-        
-    }
-    
-    render_products()
+    },
 
-    const basketBtn = document.querySelectorAll('.b-2')
-
-    const addToBasket = async (event) => {
+    addToBasket: (event) => {
         const productId = event.target.getAttribute('id');
- 
-        const productToAdd = products.find(product => product.id == productId)
+        const productToAdd = products.productsArray.find(product => product.id === productId);
 
-        if(!productsArray.includes(productToAdd)){
-            productsArray.push(productToAdd)
+        if (!products.productsArray.includes(productToAdd)) {
+            products.productsArray.push(productToAdd);
+        }
 
-        
+        products.renderProducts();
+    },
 
-             localStorage.setItem('productList',JSON.stringify(productsArray))
-            }
-            
-            render_products()
+    removeFromBasket: () => {
+        const productRemove = document.querySelectorAll('.delete');
 
-        
+        productRemove.forEach(btn => {
+            btn.addEventListener('click', (event) => {
+                const productId = event.target.getAttribute('id');
+                const index = products.productsArray.findIndex(product => product.id === productId);
+
+                products.productsArray.splice(index, 1);
+                products.renderProducts();
+            });
+        });
+    },
+
+    attachEventListeners: () => {
+        const basketBtn = document.querySelectorAll('.b-2');
+
+        basketBtn.forEach(btn => {
+            btn.addEventListener('click', products.addToBasket);
+        });
     }
-
-    
-    basketBtn.forEach(btn => {
-        btn.addEventListener('click', addToBasket)
-    })
-    
-    
-    
-}
-
-
-
-
-
+};
 
 export default products;
