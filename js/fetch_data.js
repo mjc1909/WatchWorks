@@ -2,7 +2,7 @@ const data = {}
 
 data.fetchProducts = async () => {
     try {
-        const response = await fetch('');
+        const response = await fetch('../data/products.json');
         const products = await response.json();
         return products;
         

@@ -6,14 +6,12 @@
 }
 
 body{
-    background-image: url(/img/pinkbg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #231F1F;
 }
 
 h1{
     font-family: 'shadows into light', Impact, 'Arial Narrow Bold', sans-serif;
-    color: antiquewhite;
+    color:#F2F0F0 ;
     font-size: 60px;
     font-weight: lighter;
     letter-spacing: 1px;
@@ -21,15 +19,25 @@ h1{
 }
 
 p{
-    font-family: 'shadows into light', Impact, 'Arial Narrow Bold', sans-serif;
+    font-family:Impact, 'Arial Narrow Bold', sans-serif;
     font-size: 20px;
-    color: antiquewhite;
+    color: #F2F0F0;
     font-weight: 400;
+    margin: 10px;
+
 }
 
+
+
 .p-1{
+color: #F2F0F0;
     
-    border-top: 1px solid antiquewhite;
+}
+
+.logo{
+    height: 20vh;
+    width: 50vw;
+    margin: 10px;
 }
 
 .productImg{
@@ -37,15 +45,146 @@ p{
     width: 200px;
     margin-top: 10px;
     border-radius: 10px;
+    margin: 20px;
 }
 
-.productImg:hover{
+.productImg:hover,.productImg2:hover{
     transform:scale(1.1);
     transition: 1.5s;
 }
 
 .products-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
     margin: 20px;
     text-align: center;
-    padding: 60px;
+}
+
+.div-1{
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+}
+
+.b-1{
+
+}
+
+.b-1,.b-2{
+text-align: center;
+height: 30px;
+width: 150px;
+border-radius: 20px;
+color: #231F1F;
+background-color: #F2F0F0;
+font-family: Impact, 'Arial Narrow Bold', sans-serif;
+}
+
+.b-1:hover,.b-2:hover{
+    transform: scale(1.1);
+    transition: 1.5s;
+}
+
+a{
+    text-decoration: none;
+    color:#231F1F ;
+    
+}
+
+svg{
+    position: absolute;
+    margin: 50px;
+}
+
+/*Single_View START*/
+
+.single-products-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.div-2{
+    
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-family: impact;
+    color: #F2F0F0;
+    font-weight: 400;
+    font-size: 48px;
+    margin: 10px;
+}
+
+.p-2{
+    color: #F2F0F0;
+    font-family:Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 10px;
+}
+
+.productImg2{
+    height: 200px;
+    width: 200px;
+    margin-top: 10px;
+    margin: 20px;
+}
+
+.b-2{
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.p-3{
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.p-4{
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+
+
+
+
+/*Single_View END*/
+
+@media only screen and (min-width: 600px){
+    .logo{
+        width: 300px;
+    }
+    svg{
+        margin-left: 50%;
+    }
+
+    .productImg{
+        width: 350px;
+        height: 350px;
+    }
+
+    .productImg2{
+        height: 500px;
+        width: 500px;
+    }
+
+    .b-1{
+
+    }
+
 }
